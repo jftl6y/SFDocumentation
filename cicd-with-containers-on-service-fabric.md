@@ -73,7 +73,9 @@ To create a secure Service Fabric Cluster, first add your certificate(s) to a Ke
 
 **Important** Depending on your UAC settings, it may be necessary to run Visual Studio with elevation to build the solution.
 
-5. Verify that the solution runs by running the Docker debug option ![Screenshot](Media/DockerPlay.png)
+5. Verify that the solution runs by running the Docker debug option 
+
+![Screenshot](Media/DockerPlay.png)
 
 ### Publish the Application to the Azure Container Registry
 6. Right-click the project in Solution Explorer and select **Publish**
@@ -148,7 +150,10 @@ The application image should appear in the docker images list.
  ### Creating the Build Definition
  1. Log in to the VSTS portal and select the project created for this POC.
  2. Click **Builds** and **+New**
- 3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** ![Screenshot](Media/BuildTemplate.png)
+ 3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** 
+ 
+ ![Screenshot](Media/BuildTemplate.png)
+ 
  4. Under the **Agent Queue** settings, select **Hosted VS2017**
  5. Add the NuGet Tool Installer build task to the build definition and move to the top of the build process.  This will ensure the latest NuGet agent is installed
  6. Select the Docker **Push Images** task 
@@ -160,7 +165,9 @@ The application image should appear in the docker images list.
 
  10. Select the **Update Service Fabric Manifests (Docker Image Settings)** task
  11. In **Application Package** select the ProjectName/ProjectName/ApplicationPackageRoot path.
+
  ![Screenshot](Media/BuildDef.png)
+ 
  12. Click **Triggers** and select the **Enable Continuous Integration** check box
  13. Save and Queue the build
 
@@ -176,8 +183,11 @@ The application image should appear in the docker images list.
  
  6. In the pipeline view, click into the Environment
  7. Click **+New** to configure a connection to the Service Fabric cluster
+
  ![Screenshot](Media/SFClusterCnx.png)
+ 
  8. Click the **Deploy docker-compose application to a Service Fabric cluster** phase and select the Azure subscription.
  9. Click **Save**
  10. Click **Create new release** and select the environment and artifacts created above to create a new release to test the release.
+
 ![Screenshot](Media/ReleaseDef.png)
