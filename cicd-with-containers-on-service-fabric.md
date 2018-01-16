@@ -178,7 +178,7 @@ The application image should appear in the docker images list.
  
  6. In the pipeline view, click into the Environment
  7. Click **+New** to configure a connection to the Service Fabric cluster
-![Screenshot](Media/SFClusterCnx.png)
+ ![Screenshot](Media/SFClusterCnx.png)
  8. Click the **Deploy docker-compose application to a Service Fabric cluster** phase and select the Azure subscription.
  9. Click **Save**
  10. Click **Create new release** and select the environment and artifacts created above to create a new release to test the release.
