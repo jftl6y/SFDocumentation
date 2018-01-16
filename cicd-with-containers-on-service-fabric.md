@@ -152,38 +152,41 @@ The application image should appear in the docker images list.
  3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** template
 
 ![Screenshot](Media/BuildTemplate.png)
- 4. Under the **Agent Queue** settings, select **Hosted VS2017*
- 5. Add the NuGet Tool Installer build task to the build definition and move to the top of the build process.  This will ensure the latest NuGet agent is installed
- 6. Select the Docker **Push Images** task 
- 7. Change **Action** to **Push an Image**
- 8. Change **Container Registry Type** to **Azure Container Registry**
- 9. Select the Azure subcription and container registry for the solution
  
- **Note** This may require setting up a new connection to your Azure subscription in VSTS
+4. Under the **Agent Queue** settings, select **Hosted VS2017*
+5. Add the NuGet Tool Installer build task to the build definition and move to the top of the build process.  This will ensure the latest NuGet agent is installed
+6. Select the Docker **Push Images** task 
+7. Change **Action** to **Push an Image**
+8. Change **Container Registry Type** to **Azure Container Registry**
+9. Select the Azure subcription and container registry for the solution
+
+**Note** This may require setting up a new connection to your Azure subscription in VSTS
  
- 10. Select the **Update Service Fabric Manifests (Docker Image Settings)** task
- 11. In **Application Package** select the ProjectName/ProjectName/ApplicationPackageRoot path
+10. Select the **Update Service Fabric Manifests (Docker Image Settings)** task
+11. In **Application Package** select the ProjectName/ProjectName/ApplicationPackageRoot path
 
 ![Screenshot](Media/BuildDef.png)
- 12. Click **Triggers** and select the **Enable Continuous Integration** check box
- 13. Save and Queue the build
+
+12. Click **Triggers** and select the **Enable Continuous Integration** check box
+13. Save and Queue the build
 
 ###Creating the Release Definition
 
- 1. Once the build definition is created and building successfully, click **Build and Release** and select **Releases**
- 2. Click the **+** icon and select **Create Release Definition**
- 3. Select the **Azure Service Fabric Compose Deployment** release template
- 4. Click **Artifacts** and select **Add**
- 5. Add the Build Definition created in the earlier step.
+1. Once the build definition is created and building successfully, click **Build and Release** and select **Releases**
+2. Click the **+** icon and select **Create Release Definition**
+3. Select the **Azure Service Fabric Compose Deployment** release template
+4. Click **Artifacts** and select **Add**
+5. Add the Build Definition created in the earlier step.
  
- **Optional** Set a schedule in the artifacts if a release schedule is desired.
+**Optional** Set a schedule in the artifacts if a release schedule is desired.
  
- 6. In the pipeline view, click into the Environment
- 7. Click **+New** to configure a connection to the Service Fabric cluster
+6. In the pipeline view, click into the Environment
+7. Click **+New** to configure a connection to the Service Fabric cluster
 
 ![Screenshot](Media/SFClusterCnx.png)
- 8. Click the **Deploy docker-compose application to a Service Fabric cluster** phase and select the Azure subscription.
- 9. Click **Save**
- 10. Click **Create new release** and select the environment and artifacts created above to create a new release to test the release.
+
+8. Click the **Deploy docker-compose application to a Service Fabric cluster** phase and select the Azure subscription.
+9. Click **Save**
+10. Click **Create new release** and select the environment and artifacts created above to create a new release to test the release.
  
- ![Screenshot](Media/ReleaseDef.PNG)
+![Screenshot](Media/ReleaseDef.PNG)
