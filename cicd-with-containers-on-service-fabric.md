@@ -76,7 +76,7 @@ To create a secure Service Fabric Cluster, first add your certificate(s) to a Ke
 
 5. Verify that the solution runs by running the Docker debug option 
 
-![Screenshot](Media/DockerPlay.png)
+![Media/DockerPlay.png](Media/DockerPlay.png)
 
 ### Publish the Application to the Azure Container Registry
 6. Right-click the project in Solution Explorer and select **Publish**
