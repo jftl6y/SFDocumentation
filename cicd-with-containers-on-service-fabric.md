@@ -63,7 +63,7 @@ To create a secure Service Fabric Cluster, first add your certificate(s) to a Ke
 1. Open Visual Studio 2017 and create a new solution
 2. Select the .NET Core ASP.NET Core Web Application and click **OK**
 
-![Screenshot](Media\ASPNetCoreWebTemplate.png)
+![Screenshot](/Media\ASPNetCoreWebTemplate.png)
 
 3. Select the Web Application (Model-View-Controller) template and select the **Enable Docker Support** option with OS type **Windows** 
 
