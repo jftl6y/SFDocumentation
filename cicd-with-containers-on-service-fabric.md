@@ -61,6 +61,9 @@ To create a secure Service Fabric Cluster, first add your certificate(s) to a Ke
 
 ## Web and Service Fabric Project Setup
 1. Open Visual Studio 2017 and create a new solution
+
+**Important** Depending on your UAC settings, it may be necessary to run Visual Studio with elevation to build the solution.
+
 2. Select the .NET Core ASP.NET Core Web Application and click **OK**
 
 ![Screenshot](Media/ASPNetCoreWebTemplate.png)
@@ -70,8 +73,6 @@ To create a secure Service Fabric Cluster, first add your certificate(s) to a Ke
 ![Screenshot](Media/WebApplicationAddDockerSupport.png)
 
 4. Once the solution loads, verify that the solution builds
-
-**Important** Depending on your UAC settings, it may be necessary to run Visual Studio with elevation to build the solution.
 
 5. Verify that the solution runs by running the Docker debug option 
 
