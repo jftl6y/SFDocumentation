@@ -151,7 +151,7 @@ The application image should appear in the docker images list.
  2. Click **Builds** and **New**
  3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** template
 
-![Screenshot](Media/BuildTemplate.png)
+![Screenshot](Media/BuildTemplate.PNG)
  
 4. Under the **Agent Queue** settings, select **Hosted VS2017*
 5. Add the NuGet Tool Installer build task to the build definition and move to the top of the build process.  This will ensure the latest NuGet agent is installed
@@ -165,7 +165,7 @@ The application image should appear in the docker images list.
 10. Select the **Update Service Fabric Manifests (Docker Image Settings)** task
 11. In **Application Package** select the ProjectName/ProjectName/ApplicationPackageRoot path
 
-![Screenshot](Media/BuildDef.png)
+![Screenshot](Media/BuildDef.PNG)
 
 12. Click **Triggers** and select the **Enable Continuous Integration** check box
 13. Save and Queue the build
@@ -183,7 +183,7 @@ The application image should appear in the docker images list.
 6. In the pipeline view, click into the Environment
 7. Click **+New** to configure a connection to the Service Fabric cluster
 
-![Screenshot](Media/SFClusterCnx.png)
+![Screenshot](Media/SFClusterCnx.PNG)
 
 8. Click the **Deploy docker-compose application to a Service Fabric cluster** phase and select the Azure subscription.
 9. Click **Save**
