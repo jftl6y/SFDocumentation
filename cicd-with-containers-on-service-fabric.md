@@ -149,29 +149,29 @@ The application image should appear in the docker images list.
  ## Enable CI/CD in VSTS
  ### Creating the Build Definition
  1. Log in to the VSTS portal and select the project created for this POC.
- 2. Click **Builds** and **+New**
- 3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** 
+ 2. Click **Builds** and **New**
+ 3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** template
  
  ![Screenshot](Media/BuildTemplate.png)
  
- 4. Under the **Agent Queue** settings, select **Hosted VS2017**
+ 4. Under the **Agent Queue** settings, select **Hosted VS2017*
  5. Add the NuGet Tool Installer build task to the build definition and move to the top of the build process.  This will ensure the latest NuGet agent is installed
  6. Select the Docker **Push Images** task 
  7. Change **Action** to **Push an Image**
- 8. Change **Container Registry Type** to **Azure Container Registry** 
+ 8. Change **Container Registry Type** to **Azure Container Registry**
  9. Select the Azure subcription and container registry for the solution
-
+ 
  **Note** This may require setting up a new connection to your Azure subscription in VSTS
-
+ 
  10. Select the **Update Service Fabric Manifests (Docker Image Settings)** task
- 11. In **Application Package** select the ProjectName/ProjectName/ApplicationPackageRoot path.
-
+ 11. In **Application Package** select the ProjectName/ProjectName/ApplicationPackageRoot path
+ 
  ![Screenshot](Media/BuildDef.png)
  
  12. Click **Triggers** and select the **Enable Continuous Integration** check box
  13. Save and Queue the build
 
- ###Creating the Release Definition
+###Creating the Release Definition
 
  1. Once the build definition is created and building successfully, click **Build and Release** and select **Releases**
  2. Click the **+** icon and select **Create Release Definition**
@@ -189,5 +189,5 @@ The application image should appear in the docker images list.
  8. Click the **Deploy docker-compose application to a Service Fabric cluster** phase and select the Azure subscription.
  9. Click **Save**
  10. Click **Create new release** and select the environment and artifacts created above to create a new release to test the release.
-
-![Screenshot](Media/ReleaseDef.png)
+ 
+ ![Screenshot](Media/ReleaseDef.png)
