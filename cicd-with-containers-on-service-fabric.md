@@ -63,27 +63,27 @@ To create a secure Service Fabric Cluster, first add your certificate(s) to a Ke
 1. Open Visual Studio 2017 and create a new solution
 2. Select the .NET Core ASP.NET Core Web Application and click **OK**
 
-![Screenshot](/Media\ASPNetCoreWebTemplate.png)
+![Screenshot](Media/ASPNetCoreWebTemplate.png)
 
 3. Select the Web Application (Model-View-Controller) template and select the **Enable Docker Support** option with OS type **Windows** 
 
-![Screenshot](Media\WebApplicationAddDockerSupport.png)
+![Screenshot](Media/WebApplicationAddDockerSupport.png)
 
 4. Once the solution loads, verify that the solution builds
 
 **Important** Depending on your UAC settings, it may be necessary to run Visual Studio with elevation to build the solution.
 
-5. Verify that the solution runs by running the Docker debug option ![Screenshot](Media\DockerPlay.png)
+5. Verify that the solution runs by running the Docker debug option ![Screenshot](Media/DockerPlay.png)
 
 ### Publish the Application to the Azure Container Registry
 6. Right-click the project in Solution Explorer and select **Publish**
 7. Select **Container Registry** as a target and select **Create New Azure Container Registry**
 
-![Screenshot](Media\CreateACR.png)
+![Screenshot](Media/CreateACR.png)
 
 8. Enter the details for the new Azure Container Registry:  DNS Prefix, SKU, Registry Location (region), Subscription, and Resource Group.
 
-![Screenshot](Media\ACRDetails.png)
+![Screenshot](Media/ACRDetails.png)
 
 9. Click **Create** to create and publish to the registry.
 
@@ -148,7 +148,7 @@ The application image should appear in the docker images list.
  ### Creating the Build Definition
  1. Log in to the VSTS portal and select the project created for this POC.
  2. Click **Builds** and **+New**
- 3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** ![Screenshot](Media\BuildTemplate.png)
+ 3. From the Build Template list, select the **Azure Service Fabric Application with Docker Support** ![Screenshot](Media/BuildTemplate.png)
  4. Under the **Agent Queue** settings, select **Hosted VS2017**
  5. Add the NuGet Tool Installer build task to the build definition and move to the top of the build process.  This will ensure the latest NuGet agent is installed
  6. Select the Docker **Push Images** task 
@@ -160,7 +160,7 @@ The application image should appear in the docker images list.
 
  10. Select the **Update Service Fabric Manifests (Docker Image Settings)** task
  11. In **Application Package** select the ProjectName/ProjectName/ApplicationPackageRoot path.
- ![Screenshot](Media\BuildDef.png)
+ ![Screenshot](Media/BuildDef.png)
  12. Click **Triggers** and select the **Enable Continuous Integration** check box
  13. Save and Queue the build
 
