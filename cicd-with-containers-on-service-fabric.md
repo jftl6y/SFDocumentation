@@ -182,4 +182,5 @@ The application image should appear in the docker images list.
  8. Click the **Deploy docker-compose application to a Service Fabric cluster** phase and select the Azure subscription.
  9. Click **Save**
  10. Click **Create new release** and select the environment and artifacts created above to create a new release to test the release.
+ 
  ![Screenshot](Media/ReleaseDef.PNG)
